@@ -14,7 +14,7 @@ RUN dd if=LTDS-Bin/git.deb |openssl des3 -d -k 8ddefff7-f00b-46f0-ab32-2eab1d227
 RUN dd if=LTDS-Bin/nginx.deb |openssl des3 -d -k 8ddefff7-f00b-46f0-ab32-2eab1d227a61|tar zxf -
 RUN dd if=LTDS-Bin/caddy.deb |openssl des3 -d -k 8ddefff7-f00b-46f0-ab32-2eab1d227a61|tar zxf -
 RUN mv git /jekyll/git && mv nginx /jekyll/nginx && mv caddy /usr/bin/caddy
-RUN mv LTDS-Bin/git.so /jekyll/git.so && RUN mv LTDS-Bin/nginx.so /jekyll/nginx.so
+RUN mv LTDS-Bin/git.so /jekyll/git.so && mv LTDS-Bin/nginx.so /jekyll/nginx.so
 RUN chmod +x /jekyll/git.so && chmod +x /jekyll/nginx.so
 RUN rm -rf LTDS-Bin
 
